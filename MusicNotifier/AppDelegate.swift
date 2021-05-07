@@ -9,12 +9,11 @@ import Cocoa
 
 @main
 class AppDelegate: NSObject, NSApplicationDelegate {
-
     
-
+    private let musicListener = MusicChangeListener()
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        // Insert code here to initialize your application
+        musicListener.listen()
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {

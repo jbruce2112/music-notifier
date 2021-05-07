@@ -8,22 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		52D8A66226450B9400E65B64 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D8A66126450B9400E65B64 /* AppDelegate.swift */; };
-		52D8A66426450B9400E65B64 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D8A66326450B9400E65B64 /* ViewController.swift */; };
 		52D8A66626450B9500E65B64 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52D8A66526450B9500E65B64 /* Assets.xcassets */; };
 		52D8A66926450B9500E65B64 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52D8A66726450B9500E65B64 /* Main.storyboard */; };
 		52D8A67526450B9500E65B64 /* MusicNotifierTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D8A67426450B9500E65B64 /* MusicNotifierTests.swift */; };
-		52D8A68026450B9500E65B64 /* MusicNotifierUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D8A67F26450B9500E65B64 /* MusicNotifierUITests.swift */; };
+		52D8A69126450BCC00E65B64 /* MusicChangeListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D8A69026450BCC00E65B64 /* MusicChangeListener.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		52D8A67126450B9500E65B64 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 52D8A65626450B9400E65B64 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 52D8A65D26450B9400E65B64;
-			remoteInfo = MusicNotifier;
-		};
-		52D8A67C26450B9500E65B64 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 52D8A65626450B9400E65B64 /* Project object */;
 			proxyType = 1;
@@ -35,7 +27,6 @@
 /* Begin PBXFileReference section */
 		52D8A65E26450B9400E65B64 /* MusicNotifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicNotifier.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52D8A66126450B9400E65B64 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		52D8A66326450B9400E65B64 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		52D8A66526450B9500E65B64 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52D8A66826450B9500E65B64 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		52D8A66A26450B9500E65B64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -43,9 +34,7 @@
 		52D8A67026450B9500E65B64 /* MusicNotifierTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MusicNotifierTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		52D8A67426450B9500E65B64 /* MusicNotifierTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicNotifierTests.swift; sourceTree = "<group>"; };
 		52D8A67626450B9500E65B64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		52D8A67B26450B9500E65B64 /* MusicNotifierUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MusicNotifierUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		52D8A67F26450B9500E65B64 /* MusicNotifierUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicNotifierUITests.swift; sourceTree = "<group>"; };
-		52D8A68126450B9500E65B64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52D8A69026450BCC00E65B64 /* MusicChangeListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicChangeListener.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,13 +52,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		52D8A67826450B9500E65B64 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -78,7 +60,6 @@
 			children = (
 				52D8A66026450B9400E65B64 /* MusicNotifier */,
 				52D8A67326450B9500E65B64 /* MusicNotifierTests */,
-				52D8A67E26450B9500E65B64 /* MusicNotifierUITests */,
 				52D8A65F26450B9400E65B64 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -88,7 +69,6 @@
 			children = (
 				52D8A65E26450B9400E65B64 /* MusicNotifier.app */,
 				52D8A67026450B9500E65B64 /* MusicNotifierTests.xctest */,
-				52D8A67B26450B9500E65B64 /* MusicNotifierUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -97,11 +77,11 @@
 			isa = PBXGroup;
 			children = (
 				52D8A66126450B9400E65B64 /* AppDelegate.swift */,
-				52D8A66326450B9400E65B64 /* ViewController.swift */,
 				52D8A66526450B9500E65B64 /* Assets.xcassets */,
 				52D8A66726450B9500E65B64 /* Main.storyboard */,
 				52D8A66A26450B9500E65B64 /* Info.plist */,
 				52D8A66B26450B9500E65B64 /* MusicNotifier.entitlements */,
+				52D8A69026450BCC00E65B64 /* MusicChangeListener.swift */,
 			);
 			path = MusicNotifier;
 			sourceTree = "<group>";
@@ -113,15 +93,6 @@
 				52D8A67626450B9500E65B64 /* Info.plist */,
 			);
 			path = MusicNotifierTests;
-			sourceTree = "<group>";
-		};
-		52D8A67E26450B9500E65B64 /* MusicNotifierUITests */ = {
-			isa = PBXGroup;
-			children = (
-				52D8A67F26450B9500E65B64 /* MusicNotifierUITests.swift */,
-				52D8A68126450B9500E65B64 /* Info.plist */,
-			);
-			path = MusicNotifierUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,24 +133,6 @@
 			productReference = 52D8A67026450B9500E65B64 /* MusicNotifierTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		52D8A67A26450B9500E65B64 /* MusicNotifierUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 52D8A68A26450B9500E65B64 /* Build configuration list for PBXNativeTarget "MusicNotifierUITests" */;
-			buildPhases = (
-				52D8A67726450B9500E65B64 /* Sources */,
-				52D8A67826450B9500E65B64 /* Frameworks */,
-				52D8A67926450B9500E65B64 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				52D8A67D26450B9500E65B64 /* PBXTargetDependency */,
-			);
-			name = MusicNotifierUITests;
-			productName = MusicNotifierUITests;
-			productReference = 52D8A67B26450B9500E65B64 /* MusicNotifierUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -193,10 +146,6 @@
 						CreatedOnToolsVersion = 12.4;
 					};
 					52D8A66F26450B9500E65B64 = {
-						CreatedOnToolsVersion = 12.4;
-						TestTargetID = 52D8A65D26450B9400E65B64;
-					};
-					52D8A67A26450B9500E65B64 = {
 						CreatedOnToolsVersion = 12.4;
 						TestTargetID = 52D8A65D26450B9400E65B64;
 					};
@@ -217,7 +166,6 @@
 			targets = (
 				52D8A65D26450B9400E65B64 /* MusicNotifier */,
 				52D8A66F26450B9500E65B64 /* MusicNotifierTests */,
-				52D8A67A26450B9500E65B64 /* MusicNotifierUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -239,13 +187,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		52D8A67926450B9500E65B64 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -253,7 +194,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52D8A66426450B9400E65B64 /* ViewController.swift in Sources */,
+				52D8A69126450BCC00E65B64 /* MusicChangeListener.swift in Sources */,
 				52D8A66226450B9400E65B64 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -266,14 +207,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		52D8A67726450B9500E65B64 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				52D8A68026450B9500E65B64 /* MusicNotifierUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -281,11 +214,6 @@
 			isa = PBXTargetDependency;
 			target = 52D8A65D26450B9400E65B64 /* MusicNotifier */;
 			targetProxy = 52D8A67126450B9500E65B64 /* PBXContainerItemProxy */;
-		};
-		52D8A67D26450B9500E65B64 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 52D8A65D26450B9400E65B64 /* MusicNotifier */;
-			targetProxy = 52D8A67C26450B9500E65B64 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -502,46 +430,6 @@
 			};
 			name = Release;
 		};
-		52D8A68B26450B9500E65B64 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = UVXX33WP85;
-				INFOPLIST_FILE = MusicNotifierUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.bruce32.MusicNotifierUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = MusicNotifier;
-			};
-			name = Debug;
-		};
-		52D8A68C26450B9500E65B64 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = UVXX33WP85;
-				INFOPLIST_FILE = MusicNotifierUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.bruce32.MusicNotifierUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = MusicNotifier;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -568,15 +456,6 @@
 			buildConfigurations = (
 				52D8A68826450B9500E65B64 /* Debug */,
 				52D8A68926450B9500E65B64 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		52D8A68A26450B9500E65B64 /* Build configuration list for PBXNativeTarget "MusicNotifierUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				52D8A68B26450B9500E65B64 /* Debug */,
-				52D8A68C26450B9500E65B64 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
