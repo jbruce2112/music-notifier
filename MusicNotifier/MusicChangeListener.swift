@@ -34,7 +34,7 @@ class MusicChangeListener {
     }
     
     private func deliverNotification(content: UNNotificationContent) {
-        let request = UNNotificationRequest(identifier: UUID().uuidString,
+        let request = UNNotificationRequest(identifier: "currentSong",
                                             content: content,
                                             trigger: nil)
 
