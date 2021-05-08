@@ -1,10 +1,3 @@
-//
-//  MusicChangeListener.swift
-//  MusicNotifier
-//
-//  Created by John on 5/6/21.
-//
-
 import Foundation
 import UserNotifications
 
@@ -31,8 +24,7 @@ class MusicChangeListener {
         notificationCenter.addObserver(forName: NSNotification.Name("com.apple.Music.playerInfo"),
                                        object: nil,
                                        queue: .main) { [weak self] notification in
-            print(notification)
-            notification.createContent { content in
+            notification.createContentIfCurrentlyPlaying { content in
                 guard let content = content else {
                     return
                 }
@@ -53,12 +45,14 @@ class MusicChangeListener {
         }
     }
 }
-//https://itunes.apple.com/search?term=in+decay&country=us&entity=album&limit=1&callback=jQuery111209599436147188698_1620368759198&_=1620368759199
 
 private extension Notification {
-    func createContent(completion: @escaping ((UNNotificationContent?) -> Void)) {
+    
+    func createContentIfCurrentlyPlaying(completion: @escaping ((UNNotificationContent?) -> Void)) {
         
-        guard let artist = userInfo?["Artist"] as? String,
+        let playerState = userInfo?["Player State"] as? String
+        guard playerState == "Playing",
+              let artist = userInfo?["Artist"] as? String,
               let song = userInfo?["Name"] as? String,
               let album = userInfo?["Album"] as? String else {
             completion(nil)
@@ -117,7 +111,7 @@ private extension Notification {
     }
     
     private func fetchArtworkURL(albumName: String, completion: @escaping ((URL?) -> Void)) {
-        guard var components = URLComponents(string: "https://itunes.apple.com/search?country=us&entity=album&limit=1") else {
+        guard var components = URLComponents(string: "https://itunes.apple.com/search?country=us&entity=album&limit=1&media=music") else {
             completion(nil)
             return
         }
